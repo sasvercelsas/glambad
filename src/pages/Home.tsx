@@ -27,7 +27,7 @@ export default function Home() {
       
       <header className="w-full p-6 flex justify-center border-b border-white/5 bg-background/50 backdrop-blur-sm sticky top-0 z-40">
         <span className="font-display font-bold text-xl tracking-wider text-white/80">
-          rewardshubs.co
+          GLAMBAD.COM
         </span>
       </header>
 
@@ -137,7 +137,7 @@ export default function Home() {
       </div>
 
       <footer className="w-full py-8 text-center text-sm text-gray-600 relative z-10 mb-20">
-        <p>rewardshubs.co &copy; 2026</p>
+        <p>GLAMBAD.COM &copy; 2026</p>
       </footer>
     </div>
   );
