@@ -25,11 +25,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background flex flex-col items-center">
       
-      <header className="w-full p-6 flex justify-center border-b border-white/5 bg-background/50 backdrop-blur-sm sticky top-0 z-40">
-        <span className="font-display font-bold text-xl tracking-wider text-white/80">
-          GLAMBAD.COM
-        </span>
-      </header>
+      
 
       <main className="flex-1 w-full max-w-lg px-4 py-8 pb-32 flex flex-col items-center relative z-10">
         
