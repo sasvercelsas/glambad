@@ -1,6 +1,6 @@
 // src/App.tsx
 import React from 'react';
-import { MakeupFunnel } from './components/Makeupquiz';
+import { MakeupFunnel } from './components/ui/Makeupquiz';
 
 function App() {
   return (
