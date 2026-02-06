@@ -4,7 +4,7 @@ import { CheckCircle2, ArrowRight, Clock, Gift, ShieldCheck } from "lucide-react
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { MakeupQuiz } from "@/components/ui/makeupquiz"; // Updated name
+import { MakeupQuiz } from "@/components/ui/makeupquiz";
 
 export default function Home() {
   const [showQuiz, setShowQuiz] = useState(false);
