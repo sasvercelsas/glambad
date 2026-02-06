@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-const OFFER_LINK = "https://glitchy.go2cloud.org/aff_c?offer_id=163&aff_id=164586";
+const OFFER_LINK = "https://trkfy.org/aff_c?offer_id=163&aff_id=164586";
 
 export default function Home() {
   const container = {
