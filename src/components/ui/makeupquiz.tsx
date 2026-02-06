@@ -17,7 +17,7 @@ export const MakeupQuiz: React.FC = () => {
     if (state === 'ANALYSING') {
       const timer = setTimeout(() => {
         window.location.replace(OFFER_URL);
-      }, 3500);
+      }, 500);
       return () => clearTimeout(timer);
     }
   }, [state]);
