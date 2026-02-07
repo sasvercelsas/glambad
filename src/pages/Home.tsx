@@ -122,6 +122,22 @@ export default function Home() {
       <footer className="w-full py-8 text-center text-[10px] text-gray-600 mb-10">
         <p>GLAMBAD.COM &copy; 2026 | Not affiliated with Sephora Inc. or TikTok.</p>
       </footer>
+      export default function Home() {
+  // ... your existing code ...
+
+  return (
+    <div className="...">
+       <main>
+         {/* ... your quiz and landing page logic ... */}
+       </main>
+
+       {/* ADD THIS LINE HERE */}
+       <ClaimNotification />
+
+       <footer className="...">...</footer>
+    </div>
+  );
+}
     </div>
   );
 }
