@@ -1,70 +1,92 @@
 import React, { useState, useEffect } from 'react';
 
-interface QuizProps {
+interface BridgeProps {
   onComplete: () => void;
 }
 
-export const MakeupQuiz: React.FC<QuizProps> = ({ onComplete }) => {
-  const [state, setState] = useState<'QUIZ' | 'ANALYSING'>('QUIZ');
-  const [step, setStep] = useState(0);
+export const SephoraBridge: React.FC<BridgeProps> = ({ onComplete }) => {
+  const [view, setView] = useState<'VOTE' | 'VERIFYING'>('VOTE');
 
-  const questions = [
-    { q: "What is your primary skin concern?", opts: ["Fine Lines", "Dark Spots", "Dryness", "Oily/Acne"] },
-    { q: "What is your skin type?", opts: ["Oily", "Dry / Sensitive", "Combination"] },
-    { q: "Have you shopped at Sephora in the last 12 months?", opts: ["Yes, frequently", "Once or twice", "Not yet"] },
-    { q: "What's your current age?", opts: ["Under 30", "30 - 45", "45+"] }
-  ];
-
+  // Automatically triggers the final redirect after the "Verification" animation
   useEffect(() => {
-    if (state === 'ANALYSING') {
+    if (view === 'VERIFYING') {
       const timer = setTimeout(() => {
         onComplete();
-      }, 3000);
+      }, 2500);
       return () => clearTimeout(timer);
     }
-  }, [state, onComplete]);
+  }, [view, onComplete]);
 
-  const handleAnswer = () => {
-    if (step < questions.length - 1) {
-      setStep(s => s + 1);
-    } else {
-      setState('ANALYSING');
-    }
-  };
-
-  if (state === 'ANALYSING') {
+  if (view === 'VERIFYING') {
     return (
       <div style={containerStyle}>
-        <div className="spinner"></div>
-        <h2 style={{ color: '#FF6B9D', marginBottom: '15px', fontSize: '1.5rem' }}>Analysing Profile...</h2>
-        <p style={{ color: '#ccc' }}>Checking gift card availability in your region.</p>
-        <style>{`.spinner { width: 50px; height: 50px; border: 4px solid #333; border-top: 4px solid #FF6B9D; border-radius: 50%; margin: 20px auto; animation: spin 1s linear infinite; } @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}</style>
+        <div className="pulse-loader"></div>
+        <h2 style={{ color: '#FF6B9D', marginBottom: '10px', fontSize: '1.6rem' }}>Verifying Spot...</h2>
+        <p style={{ color: '#ccc', fontSize: '0.9rem', lineHeight: '1.5' }}>
+          Checking if YOU are eligible for the <br/> 
+          <strong>$750 Reward Program</strong>
+        </p>
+        <style>{`
+          .pulse-loader { 
+            width: 60px; height: 60px; background: #FF6B9D; 
+            border-radius: 50%; margin: 30px auto; 
+            animation: pulse 1s infinite ease-in-out; 
+          }
+          @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(0.8); opacity: 0.5; }
+          }
+        `}</style>
       </div>
     );
   }
 
   return (
     <div style={containerStyle}>
-      <div style={{ marginBottom: '20px', fontSize: '0.8rem', color: '#FF6B9D', fontWeight: 'bold' }}>
-        QUESTION {step + 1} OF {questions.length}
+      {/* High-Tension Hook */}
+      <h3 style={{ fontSize: '1.5rem', marginBottom: '10px', color: 'white', fontWeight: '800' }}>
+        Is a $20 mascara getting ridiculous? 💸
+      </h3>
+      
+      <p style={{ color: '#bbb', marginBottom: '25px', fontSize: '0.95rem' }}>
+        Cast your vote to see if you qualify for a <strong>$750 Sephora Reward</strong> to offset inflation.
+      </p>
+
+      <button onClick={() => setView('VERIFYING')} style={btnStyle}>
+        YES - IT'S CRAZY
+      </button>
+      
+      <button onClick={() => setView('VERIFYING')} style={btnStyleSecondary}>
+        NO - I LOVE THE LUXURY
+      </button>
+
+      <div style={{ marginTop: '20px', fontSize: '0.75rem', color: '#666' }}>
+        *Survey completion required. First-come, first-served.
       </div>
-      <h3 style={{ fontSize: '1.3rem', marginBottom: '25px', color: 'white', lineHeight: '1.4' }}>{questions[step].q}</h3>
-      {questions[step].opts.map((opt) => (
-        <button key={opt} onClick={handleAnswer} style={btnStyle}>{opt}</button>
-      ))}
     </div>
   );
 };
 
 const containerStyle: React.CSSProperties = { 
-  maxWidth: '450px', margin: '0 auto', padding: '30px', textAlign: 'center', 
-  background: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(10px)',
-  border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '24px' 
+  maxWidth: '420px', margin: '40px auto', padding: '30px', textAlign: 'center', 
+  background: '#121212', // Darker background for "Premium" feel
+  border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '28px',
+  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
 };
 
 const btnStyle: React.CSSProperties = { 
-  display: 'block', width: '100%', padding: '16px', margin: '12px 0', 
-  cursor: 'pointer', border: '1px solid rgba(255, 255, 255, 0.2)', 
-  borderRadius: '12px', background: 'rgba(255, 107, 157, 0.1)', 
-  color: 'white', fontWeight: '600', fontSize: '1rem', transition: 'all 0.2s'
+  display: 'block', width: '100%', padding: '18px', margin: '12px 0', 
+  cursor: 'pointer', border: 'none', 
+  borderRadius: '14px', background: '#FF6B9D', // Sephora Pink
+  color: 'white', fontWeight: '800', fontSize: '1.1rem', transition: 'transform 0.1s'
+};
+
+const btnStyleSecondary: React.CSSProperties = { 
+  ...btnStyle,
+  background: 'transparent',
+  border: '1px solid #444',
+  color: '#888',
+  fontWeight: '400',
+  fontSize: '0.9rem'
 };
