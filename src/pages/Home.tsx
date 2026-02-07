@@ -4,7 +4,7 @@ import { CheckCircle2, ArrowRight, Gift, Clock, ShieldCheck } from "lucide-react
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { MakeupQuiz } from "../components/makeupquiz";
+import { MakeupQuiz } from "../components/ui/makeupquiz";
 
 const OFFER_LINK = "https://trkfy.org/aff_c?offer_id=163&aff_id=164586";
 
