@@ -62,7 +62,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center overflow-x-hidden">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-pink-900/20 via-black to-black text-white flex flex-col items-center overflow-x-hidden">
       <main className="flex-1 w-full max-w-lg px-4 py-8 flex flex-col items-center relative z-10">
         <AnimatePresence mode="wait">
           {!quizFinished ? (
