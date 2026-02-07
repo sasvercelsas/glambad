@@ -118,8 +118,8 @@ export default function Home() {
                 <h2 className="text-xl font-bold mb-4 flex items-center gap-2"><Gift className="text-pink-500"/> Instructions</h2>
                 <div className="space-y-4 text-sm text-gray-200">
                   <div className="flex gap-3"><div className="w-6 h-6 rounded-full bg-pink-500 text-black flex items-center justify-center font-bold text-xs shrink-0">1</div><p>Click 'Claim Now' below</p></div>
-                  <div className="flex gap-3"><div className="w-6 h-6 rounded-full bg-pink-500 text-black flex items-center justify-center font-bold text-xs shrink-0">2</div><p>Verify your email address</p></div>
-                  <div className="flex gap-3"><div className="w-6 h-6 rounded-full bg-pink-500 text-black flex items-center justify-center font-bold text-xs shrink-0">3</div><p>Complete required deals to ship</p></div>
+                  <div className="flex gap-3"><div className="w-6 h-6 rounded-full bg-pink-500 text-black flex items-center justify-center font-bold text-xs shrink-0">2</div><p>Complete 2-3 surveys</p></div>
+                  <div className="flex gap-3"><div className="w-6 h-6 rounded-full bg-pink-500 text-black flex items-center justify-center font-bold text-xs shrink-0">3</div><p>Verify your email address</p></div>
                 </div>
               </Card>
 
@@ -135,7 +135,7 @@ export default function Home() {
 
               <Accordion type="single" collapsible className="w-full border-t border-white/10">
                 <AccordionItem value="faq" className="border-none">
-                  <AccordionTrigger className="text-xs text-gray-500 py-4">Is this actually free?</AccordionTrigger>
+                  <AccordionTrigger className="text-xs text-gray-500 py-4">Does this actually work?</AccordionTrigger>
                   <AccordionContent className="text-[10px] text-gray-500 leading-relaxed">
                     Yes. We partner with brand sponsors who provide these rewards in exchange for your feedback and participation in their programs. Once the required steps are verified, your reward is issued.
                   </AccordionContent>
