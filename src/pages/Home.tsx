@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, ArrowRight, ExternalLink, Loader2, Gift } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
-const OFFER_LINK = "https://linkthem.net/aff_c?offer_id=79&aff_id=168374";
+const OFFER_LINK = "https://giftclick.org/aff_c?offer_id=76&aff_id=168374";
 
 // --- LIVE NOTIFICATION COMPONENT ---
 const ClaimNotification = () => {
