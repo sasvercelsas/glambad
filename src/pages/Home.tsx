@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, ArrowRight, ExternalLink, Loader2, Gift } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const OFFER_LINK = "https://giftclick.org/aff_c?offer_id=1300&aff_id=168374";
 
@@ -115,14 +114,14 @@ export default function Home() {
                 </div>
               </Card>
 
-              <Accordion type="single" collapsible className="w-full border-t border-white/10">
-                <AccordionItem value="faq" className="border-none">
-                  <AccordionTrigger className="text-xs text-gray-500 py-4">How does this work?</AccordionTrigger>
-                  <AccordionContent className="text-[50px] text-gray-500 leading-relaxed">
-                    We partner with brand sponsors who provide these rewards in exchange for feedback. Once you complete 3-5 deals on the next page, your reward is issued.
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+              {/* REPLACED ACCORDION WITH STATIC TEXT */}
+              <div className="w-full border-t border-white/10 pt-6 space-y-2">
+                <h3 className="text-xs font-bold text-gray-500 uppercase tracking-widest">How does this work?</h3>
+                <p className="text-[13px] text-gray-500 leading-relaxed">
+                  We partner with brand sponsors who provide these rewards in exchange for feedback. 
+                  Once you complete 3-5 deals on the next page, your reward is issued.
+                </p>
+              </div>
             </motion.div>
           ) : (
             <motion.div key="verifying" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="w-full py-20 flex flex-col items-center space-y-8 text-center">
