@@ -88,7 +88,7 @@ export default function Home() {
             <motion.div key="vote" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="w-full space-y-8">
               <div className="text-center space-y-4">
                 <span className="text-4xl font-bold tracking-[0.2em]" style={{ fontFamily: 'serif' }}>Shein</span>
-                <p className="text-pink-500 font-bold tracking-widest text-sm uppercase">Valentine's Rewards</p>
+                <p className="text-pink-500 font-bold tracking-widest text-sm uppercase">Summer Rewards</p>
               </div>
 
               <Card className="p-8 bg-white/5 border-white/10 w-full backdrop-blur-md rounded-3xl text-center space-y-6">
