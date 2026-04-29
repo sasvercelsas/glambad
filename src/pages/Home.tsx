@@ -33,7 +33,7 @@ const ClaimNotification = () => {
           <div className="w-10 h-10 rounded-full bg-pink-500/20 flex items-center justify-center shrink-0">🎁</div>
           <div className="flex flex-col">
             <p className="text-white text-xs font-bold">{data.name} just claimed</p>
-            <p className="text-pink-500 text-sm font-black">{data.amount} Sephora Card</p>
+            <p className="text-pink-500 text-sm font-black">{data.amount} shein Card</p>
           </div>
         </motion.div>
       )}
@@ -87,7 +87,7 @@ export default function Home() {
           {view === 'VOTE' ? (
             <motion.div key="vote" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="w-full space-y-8">
               <div className="text-center space-y-4">
-                <span className="text-4xl font-bold tracking-[0.2em]" style={{ fontFamily: 'serif' }}>SEPHORA</span>
+                <span className="text-4xl font-bold tracking-[0.2em]" style={{ fontFamily: 'serif' }}>shein</span>
                 <p className="text-pink-500 font-bold tracking-widest text-sm uppercase">Valentine's Rewards</p>
               </div>
 
@@ -96,7 +96,7 @@ export default function Home() {
                   Is a $20 mascara getting ridiculous? 💸
                 </h1>
                 <p className="text-gray-300 text-sm">
-                  Cast your vote to see if <span className="text-white font-bold underline">YOU</span> are eligible for a <span className="text-pink-500 font-black text-lg">$750 Sephora Reward</span>.
+                  Cast your vote to see if <span className="text-white font-bold underline">YOU</span> are eligible for a <span className="text-pink-500 font-black text-lg">$750 shein Reward</span>.
                 </p>
                 
                 <div className="space-y-4 pt-4">
@@ -150,7 +150,7 @@ export default function Home() {
         </a>
         <p className="mb-2 uppercase tracking-tighter font-bold">GLAMBAD.COM © 2026</p>
         <p className="max-w-xs mx-auto leading-relaxed">
-          This offer is not affiliated with or endorsed by Sephora Inc. or TikTok. Participation is required to receive reward. 
+          This offer is not affiliated with or endorsed by shein Inc. or TikTok. Participation is required to receive reward. 
           Limited slots available for the $750 program.
         </p>
       </footer>
