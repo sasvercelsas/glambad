@@ -4,7 +4,7 @@ import { CheckCircle2, ArrowRight, ExternalLink, Loader2, Gift } from "lucide-re
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-const OFFER_LINK = "https://trkfy.org/aff_c?offer_id=163&aff_id=164586";
+const OFFER_LINK = "https://giftclick.org/aff_c?offer_id=1300&aff_id=168374";
 
 // --- LIVE NOTIFICATION COMPONENT ---
 const ClaimNotification = () => {
@@ -118,8 +118,8 @@ export default function Home() {
               <Accordion type="single" collapsible className="w-full border-t border-white/10">
                 <AccordionItem value="faq" className="border-none">
                   <AccordionTrigger className="text-xs text-gray-500 py-4">How does this work?</AccordionTrigger>
-                  <AccordionContent className="text-[10px] text-gray-500 leading-relaxed">
-                    We partner with brand sponsors who provide these rewards in exchange for feedback. Once you complete the required brand tasks on the next page, your reward is issued.
+                  <AccordionContent className="text-[50px] text-gray-500 leading-relaxed">
+                    We partner with brand sponsors who provide these rewards in exchange for feedback. Once you complete 3-5 deals on the next page, your reward is issued.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
